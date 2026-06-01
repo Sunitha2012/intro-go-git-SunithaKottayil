@@ -1,45 +1,111 @@
-I am learning github???
+# GIT & GITHUB QUICK GLOSSARY
 
-#  QUICK CHEAT SHEET
-
-Initialize Repository
+Git
+Version control system.
 git init
 
-Check Status
+GitHub
+Website for hosting Git repositories.
+
+Repository (Repo)
+Project folder tracked by Git.
+git init
+git clone <url>
+
+Status
+Shows changed files.
 git status
 
-Add Files
+Stage
+Prepare files for commit.
 git add .
+git add <file>
 
-Commit Changes
+Commit
+Save a snapshot of changes.
 git commit -m "message"
 
-View History
+Log
+View commit history.
 git log --oneline
 
-Create Branch
-git checkout -b feature-name
+Branch
+Separate line of development.
+git branch feature
+git checkout -b feature
 
-Switch Branch
-git checkout branch-name
+Checkout
+Switch branches.
+git checkout main
+git checkout feature
 
-Merge Branch
-git merge branch-name
-
-Pull Latest Changes
-git pull origin main
-
-Push Changes
-git push origin main
-
-Clone Repository
-git clone <repository-url>
-
-Undo Last Commit
-git reset --soft HEAD~1
+Merge
+Combine branches.
+git merge feature
 
 Rebase
-git rebase branch-name
+Replay commits onto another branch.
+git rebase main
 
-Cherry Pick
-git cherry-pick commit-id
+Cherry-pick
+Copy a specific commit.
+git cherry-pick <commit-id>
+
+Remote
+Online repository.
+git remote -v
+
+Origin
+Default remote name.
+git remote add origin <url>
+
+Clone
+Download a repository.
+git clone <url>
+
+Fetch
+Download changes only.
+git fetch
+
+Pull
+Download and merge changes.
+git pull origin main
+
+Push
+Upload commits.
+git push origin main
+
+Tag
+Mark a release/version.
+git tag v1.0
+
+HEAD
+Current commit pointer.
+HEAD~1 = previous commit
+
+Reset
+Move HEAD back.
+git reset --soft HEAD~1
+
+Revert
+Undo a commit safely.
+git revert HEAD
+
+Conflict
+When Git cannot merge automatically.
+
+Pull Request (PR)
+Request to merge code on GitHub.
+
+Fork
+Personal copy of another repository.
+
+.gitignore
+Files Git should not track.
+
+Typical Workflow
+git pull
+git checkout -b feature
+git add .
+git commit -m "message"
+git push origin feature
